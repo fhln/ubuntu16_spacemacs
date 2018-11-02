@@ -387,15 +387,7 @@ you should place your code here."
   (setq company-minimum-prefix-length 2)
 ;;;;;;;;</company mode>
 
-;;;;;;;;<slime>
-  (setq temporary-file-directory "~/.emacs.d/tmp")
-  (add-to-list 'load-path "/usr/bin/sbcl")
-  (setq inferior-lisp-program "sbcl")
-  (add-to-list 'load-path "~/my-emacs-lib/slime")
-  (require 'slime-autoloads)
-  (slime-setup '(slime-fancy))
-  (define-key slime-repl-mode-map (kbd "C-c C-q") 'slime-close-all-parens-in-sexp)
-;;;;;;;;</slime>
+
 
 ;;;;;;;;;;;;<highlight-symbol>
   (add-to-list 'load-path "~/my-emacs-lib/")
@@ -454,51 +446,8 @@ you should place your code here."
     "Search the word at point with Dash." t nil)
   (global-set-key "\C-cd" 'zeal-at-point)
 
-  ;;;;;;<blog>
-  ;;https://www.cnblogs.com/astropeak/p/6206379.html
-  
-  (setq load-path (cons "~/my-emacs-lib/org2blog/" load-path))
-  ;; (setq load-path (cons "~/my-emacs-lib/metaweblog/" load-path))
- 
-  ;; (require 'xml-rpc)
-  ;; (require  'metaweblog)
-  (require 'org2blog-autoloads)
-  (setq org-directory "~/blog")
-   (setq org2blog/wp-blog-alist
-        '(("cnblogs"
-           ;; :url "http://rpc.cnblogs.com/metaweblog/fhln"
-           ;; :username "fhln"
-           ;; :password "!ln123456"
-           :default-title "Bullet3"
-           :default-categories ("Bullet")
-           :tags-as-categories nil)))
-
-  ;;;;;;</blog>
-
-  (setq load-path (cons "~/my-emacs-lib/cnblogs/" load-path))
-  (require 'cnblogs)
-  (setq org-export-show-temporary-export-buffer nil)
 
 
   )
 
-;; Do not write anything past this comment. This is where Emacs will
-;; auto-generate custom variable definitions.
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(cnblogs-blog-id "fhln")
- '(cnblogs-server-url "http://www.cnblogs.com/fhln/services/metaweblog.aspx")
- '(cnblogs-user-name "fhln")
- '(cnblogs-user-passwd "!ln123456")
- '(package-selected-packages
-   (quote
-    (org-category-capture alert log4e gntp org2blog zeal-at-point counsel-dash helm-dash visual-regexp-steroids visual-regexp lispy zoutline keyfreq impatient-mode simple-httpd helm-ls-git flycheck-package package-lint discover-my-major makey cmake-font-lock youdao-dictionary yapfify yaml-mode xterm-color xcscope ws-butler winum which-key wgrep volatile-highlights vi-tilde-fringe uuidgen use-package unfill toc-org stickyfunc-enhance srefactor spaceline smex smeargle shell-pop restart-emacs request rainbow-delimiters pyvenv pytest pyim pyenv-mode py-isort popwin pip-requirements persp-mode pcre2el paradox pangu-spacing orgit org-projectile org-present org-pomodoro org-mime org-download org-bullets open-junk-file neotree mwim multi-term move-text magit-gitflow macrostep lorem-ipsum live-py-mode linum-relative link-hint ivy-hydra indent-guide ibuffer-projectile hy-mode hungry-delete htmlize hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-make google-translate golden-ratio gnuplot gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe git-gutter-fringe+ ggtags fuzzy flyspell-correct-ivy flycheck-pos-tip flx-ido find-by-pinyin-dired fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-magit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eval-sexp-fu eshell-z eshell-prompt-extras esh-help elisp-slime-nav dumb-jump disaster diminish diff-hl define-word cython-mode counsel-projectile company-statistics company-c-headers company-anaconda column-enforce-mode cmake-mode clean-aindent-mode clang-format auto-yasnippet auto-highlight-symbol auto-dictionary auto-compile aggressive-indent adaptive-wrap ace-window ace-pinyin ace-link ac-ispell))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
+
